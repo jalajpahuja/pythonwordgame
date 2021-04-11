@@ -13,6 +13,7 @@ This will ask user input for the following:
 ## Execution order of the game ##
 1. It takes the player name
 2. It trigger the functions in the below order
+
         1. fn_game()
             create a secret word from the list of words mentioned in the word file
             reads the player guesses and checks the guesses for a word
