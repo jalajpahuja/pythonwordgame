@@ -8,13 +8,13 @@ def fn_game_top_score():
     v_checkfilesize = os.stat(v_scoresfile_name).st_size == 0
     if v_checkfilesize is False:
         with open(v_scoresfile_name) as f:
-            dd = f.read()
+            tmp_d = f.read()
 
-        d = eval(dd)
-        sorted_dict = dict(sorted(d.items(), key=lambda item: item[1], reverse=True)[:v_topscorelistnumber])
+        data_dic = eval(tmp_d)
+        sorted_data_dic = dict(sorted(data_dic.items(), key=lambda item: item[1], reverse=True)[:v_topscorelistnumber])
         print("SCOREBOARD\tList of top {} players\n".format(v_topscorelistnumber))
         print("{:25} {}".format("Player", "Score"))
-        for key, value in sorted_dict.items():
+        for key, value in sorted_data_dic.items():
             print("{:25} {}".format(key, value))
     else:
         pass
@@ -25,23 +25,23 @@ def fn_game_score(v_player_name):
     v_checkfilesize = os.stat(v_scoresfile_name).st_size == 0
     if v_checkfilesize is False:
         with open(v_scoresfile_name) as f:
-            dd = f.read()
-        d = eval(dd)
+            tmp_d = f.read()
+        data_dic = eval(tmp_d)
     else:
-        d = {}
+        data_dic = {}
 
     v_score = v_winner_points
     v_playername = v_player_name
-    if v_playername in d.keys():
-        v_playerlastscore = d[v_playername]
+    if v_playername in data_dic.keys():
+        v_playerlastscore = data_dic[v_playername]
         v_playernewscore = v_playerlastscore + v_score
-        d[v_playername]=v_playernewscore
+        data_dic[v_playername]=v_playernewscore
     else:
         v_playernewscore = v_score
-        d[v_playername]=v_playernewscore
+        data_dic[v_playername]=v_playernewscore
 
     f = open(v_scoresfile_name, "w")
-    f.write( str(d) )
+    f.write( str(data_dic) )
     f.close()
 
 # function definition - to print the lines
