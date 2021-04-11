@@ -49,9 +49,9 @@ d. game_scores.txt:
 file that will keep the track of the scores for players
 
 ## Unit Test Details ##
-1. Checked the game if there is no score before and it is the first time any player is playing, so created a check.
+1. Checked the game if there is no score before and if it is the first time any player is playing, it will not fail due to a check.
 2. Currently, the game is not showing any points if the player lose the game as it's 0 but if the player wins then it is 10 points addition to the scoreboard.
-3. Didn't created this game as an executable code but it can be created if required.
+3. This game can also be created as an executable code file in later stages.
 4. Tested the parameters like number of chances, number of top score displayed in scoreboard in the game.
 5. Tested the scenario where the player is passing the name in lower or upper case.
 6. Some other checks like alphabet input only can also be applied in later stages.
