@@ -22,9 +22,9 @@ def fn_game_top_score():
 # function definition - to add the score of the player in the scoreboard
 
 def fn_game_score(v_player_name):
-    v_checkfilesize = os.stat("game_scores.txt").st_size == 0
+    v_checkfilesize = os.stat(v_scoresfile_name).st_size == 0
     if v_checkfilesize is False:
-        with open('game_scores.txt') as f:
+        with open(v_scoresfile_name) as f:
             dd = f.read()
         d = eval(dd)
     else:
@@ -40,7 +40,7 @@ def fn_game_score(v_player_name):
         v_playernewscore = v_score
         d[v_playername]=v_playernewscore
 
-    f = open("game_scores.txt", "w")
+    f = open(v_scoresfile_name, "w")
     f.write( str(d) )
     f.close()
 
