@@ -13,17 +13,17 @@ This will ask user input for the following:
 ## Execution order of the game ##
 1. It takes the player name
 2. It trigger the functions in the below order
-        a. fn_game()
+        1. fn_game()
             create a secret word from the list of words mentioned in the word file
             reads the player guesses and checks the guesses for a word
-        fn_game_score()
+        2. fn_game_score()
             if word matches then add 10 points for a user else no points will be added to the scoreboard
             once the guesses finishes or word match is a success then
-        fn_game_top_score()
+        3. fn_game_top_score()
             this function displays the top 10 scorer of the game.
-        fn_game_again()
+        4. fn_game_again()
             this function ask the same player if player wants to play again.
-        fn_print_lines()
+        5. fn_print_lines()
             this function is being called at multiple places to print the dashes.
             
 ## Current settings for the game ##
