@@ -10,6 +10,22 @@ This will ask user input for the following:
 1. name of the player at the start of the game
 2. guess letter but within a defined set of attempts
 
+## Execution order of the game ##
+1. It takes the player name
+2. It trigger the functions in the below order
+        fn_game()
+            create a secret word from the list of words mentioned in the word file
+            reads the player guesses and checks the guesses for a word
+        fn_game_score()
+            if word matches then add 10 points for a user else no points will be added to the scoreboard
+            once the guesses finishes or word match is a success then
+        fn_game_top_score()
+            this function displays the top 10 scorer of the game.
+        fn_game_again()
+            this function ask the same player if player wants to play again.
+        fn_print_lines()
+            this function is being called at multiple places to print the dashes.
+            
 ## Current settings for the game ##
 List of the parameters set for the game to run:
 1. Number of chances user will get to guess = 5
