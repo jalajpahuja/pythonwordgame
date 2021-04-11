@@ -10,7 +10,7 @@ This will ask user input for the following:
 1. name of the player at the start of the game
 2. guess letter but within a defined set of attempts
 
-## Current settings for the game
+## Current settings for the game ##
 List of the parameters set for the game to run:
 1. Number of chances user will get to guess = 5
 2. Number of points allocated to user in each win = 10
@@ -47,3 +47,11 @@ contains variables to store the following:
 
 d. game_scores.txt:
 file that will keep the track of the scores for players
+
+## Unit Test Details ##
+1. Checked the game if there is no score before and it is the first time any player is playing, so created a check.
+2. Currently, the game is not showing any points if the player lose the game as it's 0 but if the player wins then it is 10 points addition to the scoreboard.
+3. Didn't created this game as an executable code but it can be created if required.
+4. Tested the parameters like number of chances, number of top score displayed in scoreboard in the game.
+5. Tested the scenario where the player is passing the name in lower or upper case.
+6. Some other checks like alphabet input only can also be applied in later stages.
